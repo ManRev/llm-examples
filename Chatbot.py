@@ -2,7 +2,7 @@ from openai import OpenAI
 import streamlit as st
 
 # Retrieve OpenAI API key from st.secrets
-openai_api_key = st.secrets["OPENAI_API_KEY"]
+openai_api_key = st.secrets['OPENAI_API_KEY']
 
 st.title("💬 Chatbot")
 st.caption("🚀 A streamlit chatbot powered by OpenAI LLM")
