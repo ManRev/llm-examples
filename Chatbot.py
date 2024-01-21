@@ -1,8 +1,11 @@
 from openai import OpenAI
 import streamlit as st
 
+# Retrieve OpenAI API key from st.secrets
+openai_api_key = st.secrets.get("OPENAI_API_KEY", "")
+
 with st.sidebar:
-    openai_api_key = st.text_input("OpenAI API Key", key="chatbot_api_key", type="password")
+    st.text_input("OpenAI API Key", key="chatbot_api_key", type="password", value=openai_api_key)
     "[Get an OpenAI API key](https://platform.openai.com/account/api-keys)"
     "[View the source code](https://github.com/streamlit/llm-examples/blob/main/Chatbot.py)"
     "[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/streamlit/llm-examples?quickstart=1)"
